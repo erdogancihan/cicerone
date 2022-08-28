@@ -3,5 +3,6 @@ public class Main {
         System.out.println("selam dünya");
         int result=(12<10)? 1:0;
         System.out.println(result);
+        System.out.println("sonuc yazdirildi");
     }
 }
