@@ -5,6 +5,6 @@ public class Main {
         System.out.println(result);
         System.out.println("sonuc yazdirildi");
         System.out.println("github deneme");
-        System.out.println("denememeeeee");
+        System.out.println("denememeeeee123");
     }
 }
