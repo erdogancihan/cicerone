@@ -1,4 +1,4 @@
-private class Erdogan {
+public class Erdogan {
   public Erdogan() {
       helloWorld();
     }
