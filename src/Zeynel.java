@@ -6,5 +6,10 @@ public class Zeynel {
 
     private void helloWorld() {
         System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
     }
 }
