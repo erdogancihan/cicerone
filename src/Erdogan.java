@@ -13,7 +13,8 @@ public class Erdogan {
         // loopJob();
         // loopJob2();
         // dataTypes();
-        eof();
+        // eof();
+        intToString();
     }
 
     private void helloWorld() {
@@ -169,6 +170,19 @@ public class Erdogan {
         }
         System.out.println(i + " " + s);
 
+    }
+
+    private void intToString(){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        sc.close();
+        if(n>=-100 && n<=100){
+
+            String s=String.valueOf(n);
+            System.out.println("Good job");
+        }else{
+            System.out.println("Wrong answer");
+        }
     }
 }
 
