@@ -2,6 +2,8 @@ import javax.naming.InterruptedNamingException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Erdogan {
@@ -14,7 +16,8 @@ public class Erdogan {
         // loopJob2();
         // dataTypes();
         // eof();
-        intToString();
+        // intToString();
+        getWeekDay(8, 5, 2015);
     }
 
     private void helloWorld() {
@@ -172,17 +175,35 @@ public class Erdogan {
 
     }
 
-    private void intToString(){
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
+    private void intToString() {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
         sc.close();
-        if(n>=-100 && n<=100){
+        if (n >= -100 && n <= 100) {
 
-            String s=String.valueOf(n);
+            String s = String.valueOf(n);
             System.out.println("Good job");
-        }else{
+        } else {
             System.out.println("Wrong answer");
         }
+    }
+
+    private void getWeekDay(int month, int day, int year) {
+        //05.08.2015 Wednesday
+        if (year > 2000 && year < 3000) {
+            Calendar calendar = Calendar.getInstance();
+            Locale locale = Locale.getDefault();
+
+            calendar.set(year, month, day);
+
+            String dayName = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, locale);
+
+            dayName = dayName.toUpperCase();
+
+            System.out.println(dayName);
+            //System.out.println(calendar.toString());
+        }
+
     }
 }
 
