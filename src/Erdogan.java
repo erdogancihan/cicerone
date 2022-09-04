@@ -63,7 +63,7 @@ public class Erdogan {
         // Write your code here.
         System.out.println("String: " + s);
         System.out.println("Double: " + d);
-        System.out.println("Int: " + i);
+        System.out.println("Int1 " + i);
     }
 
 }
