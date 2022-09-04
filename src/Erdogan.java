@@ -1,3 +1,4 @@
+import javax.naming.InterruptedNamingException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,8 +12,8 @@ public class Erdogan {
         // formatOutput();
         // loopJob();
         // loopJob2();
-        dataTypes();
-
+        // dataTypes();
+        eof();
     }
 
     private void helloWorld() {
@@ -113,7 +114,7 @@ public class Erdogan {
                 int a = in.nextInt();
                 int b = in.nextInt();
                 int n = in.nextInt();
-                for (int j = 0; j <= n-1; j++) {
+                for (int j = 0; j <= n - 1; j++) {
                     int result = 0;
                     int power = 0;
                     for (int k = 0; k <= j; k++) {
@@ -129,32 +130,45 @@ public class Erdogan {
         }
     }
 
-    private void dataTypes(){
-        Scanner sc=new Scanner(System.in);
-        int t=sc.nextInt();
-        while(t>0) {
+    private void dataTypes() {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t > 0) {
             long x;
 
             try {
                 x = sc.nextLong();
-                System.out.println(x +" can be fitted in:");
-                if(x>=-Math.pow(2,7)&& x<=Math.pow(2,7)-1){
+                System.out.println(x + " can be fitted in:");
+                if (x >= -Math.pow(2, 7) && x <= Math.pow(2, 7) - 1) {
                     System.out.println("* byte");
-                }if(x>=-Math.pow(2,15)&& x<=Math.pow(2,15)-1){
+                }
+                if (x >= -Math.pow(2, 15) && x <= Math.pow(2, 15) - 1) {
                     System.out.println("* short");
                 }
-                if(x>=-Math.pow(2,31)&& x<=Math.pow(2,31)-1){
+                if (x >= -Math.pow(2, 31) && x <= Math.pow(2, 31) - 1) {
                     System.out.println("* int");
                 }
-                if(x>=-Math.pow(2,63)&& x<=Math.pow(2,63)-1){
+                if (x >= -Math.pow(2, 63) && x <= Math.pow(2, 63) - 1) {
                     System.out.println("* long");
                 }
             } catch (Exception e) {
                 System.out.println(sc.next() + " can't be fitted anywhere");
             }
-        t--;
+            t--;
         }
     }
 
+    private void eof() throws IOException {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int i = 1;
+        while (sc.hasNext()) {
+            System.out.println(i + " " + s);
+            s = sc.nextLine();
+            i++;
+        }
+        System.out.println(i + " " + s);
+
+    }
 }
 
