@@ -2,9 +2,10 @@ import java.util.Scanner;
 
 public class Erdogan {
     public Erdogan() {
-        //helloWorld();
+        // helloWorld();
         // sayialRun();
-        learnIO();
+        // learnIO();
+        formatOutput();
     }
 
     private void helloWorld() {
@@ -63,7 +64,25 @@ public class Erdogan {
         // Write your code here.
         System.out.println("String: " + s);
         System.out.println("Double: " + d);
-        System.out.println("Int1 " + i);
+        System.out.println("Int " + i);
     }
 
+    private void formatOutput() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("=================");
+
+        for (int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
+
+            while (s1.length() < 15) {
+                s1 = s1 + " ";
+            }
+            System.out.print(s1);
+            String xs;
+            xs = x < 10 ? "00" + x : (x < 100 ?"0" + x : ""+x);
+            System.out.println(xs);
+        }
+        System.out.println("=================");
+    }
 }
