@@ -9,8 +9,8 @@ public class Erdogan {
         // sayialRun();
         // learnIO();
         // formatOutput();
-
-        loopJob();
+        // loopJob();
+        loopJob2();
 
     }
 
@@ -103,4 +103,30 @@ public class Erdogan {
             }
         }
     }
+
+    private void loopJob2() {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        if (t >= 0 && t <= 500) {
+            for (int i = 0; i < t; i++) {
+                int a = in.nextInt();
+                int b = in.nextInt();
+                int n = in.nextInt();
+                for (int j = 0; j <= n-1; j++) {
+                    int result = 0;
+                    int power = 0;
+                    for (int k = 0; k <= j; k++) {
+                        power = (k == 0) ? 1 : power * 2;
+                        result = result + (b * power);
+                    }
+                    result = result + a;
+                    System.out.print(result + " ");
+                }
+                System.out.println("");
+
+            }
+        }
+    }
+
 }
+
