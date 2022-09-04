@@ -1,11 +1,17 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Erdogan {
-    public Erdogan() {
+    public Erdogan() throws IOException {
         // helloWorld();
         // sayialRun();
         // learnIO();
-        formatOutput();
+        // formatOutput();
+
+        loopJob();
+
     }
 
     private void helloWorld() {
@@ -80,9 +86,21 @@ public class Erdogan {
             }
             System.out.print(s1);
             String xs;
-            xs = x < 10 ? "00" + x : (x < 100 ?"0" + x : ""+x);
+            xs = x < 10 ? "00" + x : (x < 100 ? "0" + x : "" + x);
             System.out.println(xs);
         }
         System.out.println("=================");
+    }
+
+    private void loopJob() throws IOException {
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(bufferedReader.readLine().trim());
+        bufferedReader.close();
+        if (N <= 20 || N >= 2) {
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(N + " x " + i + " = " + N * i);
+            }
+        }
     }
 }

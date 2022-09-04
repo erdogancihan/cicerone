@@ -1,5 +1,7 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
 
         // https://www.hackerrank.com/domains/java
         //Do not touch here. Your code in your constructer will run here auto.
