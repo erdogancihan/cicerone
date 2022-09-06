@@ -4,6 +4,7 @@ public class Kamil {
     public Kamil() {
         helloWorld();
         loop2();
+        endoffile();
     }
     private void loop2(){
         Scanner in = new Scanner(System.in);
@@ -30,7 +31,17 @@ public class Kamil {
         }
         in.close();
     }
-
+private void endoffile(){
+    Scanner scan=new Scanner(System.in);
+    int i=1;
+    do {
+        String st=scan.nextLine();
+        System.out.println(i+" "+st);
+        i++;
+    }
+    while (scan.hasNext());
+    scan.close();
+}
     private void helloWorld() {
         System.out.println("Hello Kamil");
     }
