@@ -15,9 +15,9 @@ public class Erdogan {
         // loopJob();
         // loopJob2();
         // dataTypes();
-        eof();
+        // eof();
         // intToString();
-        //getWeekDay(8, 5, 2015);
+        getWeekDay(8, 5, 2015);
     }
 
     private void helloWorld() {
@@ -192,16 +192,14 @@ public class Erdogan {
             Calendar calendar = Calendar.getInstance();
             Locale locale = Locale.getDefault();
 
-            calendar.set(year, month, day);
+            calendar.set(year, month - 1, day);
 
             String dayName = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, locale);
-
             dayName = dayName.toUpperCase();
 
             System.out.println(dayName);
             //System.out.println(calendar.toString());
         }
-
     }
 }
 

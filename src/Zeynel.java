@@ -1,7 +1,7 @@
 public class Zeynel {
     //constructer
     public Zeynel() {
-        helloWorld();
+       // helloWorld();
     }
 
     private void helloWorld() {

@@ -2,9 +2,9 @@ import java.util.Scanner;
 public class Kamil {
     //constructer
     public Kamil() {
-        helloWorld();
-        loop2();
-        endoffile();
+        //helloWorld();
+        //loop2();
+       //endoffile();
     }
     private void loop2(){
         Scanner in = new Scanner(System.in);
