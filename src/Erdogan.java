@@ -15,9 +15,9 @@ public class Erdogan {
         // loopJob();
         // loopJob2();
         // dataTypes();
-        // eof();
+        eof();
         // intToString();
-        getWeekDay(8, 5, 2015);
+        //getWeekDay(8, 5, 2015);
     }
 
     private void helloWorld() {
@@ -164,15 +164,13 @@ public class Erdogan {
 
     private void eof() throws IOException {
         Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
         int i = 1;
-        while (sc.hasNext()) {
+        do {
+            String s = sc.nextLine();
             System.out.println(i + " " + s);
-            s = sc.nextLine();
             i++;
-        }
-        System.out.println(i + " " + s);
-
+        } while (sc.hasNext());
+        sc.close();
     }
 
     private void intToString() {
