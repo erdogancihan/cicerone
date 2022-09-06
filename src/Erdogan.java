@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.Scanner;
+import java.text.NumberFormat;
 
 public class Erdogan {
     public Erdogan() throws IOException {
@@ -17,7 +18,9 @@ public class Erdogan {
         // dataTypes();
         // eof();
         // intToString();
-        getWeekDay(8, 5, 2015);
+        // getWeekDay(8, 5, 2015);
+        formatCurrency();
+
     }
 
     private void helloWorld() {
@@ -199,6 +202,22 @@ public class Erdogan {
 
             System.out.println(dayName);
             //System.out.println(calendar.toString());
+        }
+    }
+
+    private void formatCurrency() {
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+        NumberFormat nfUS = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat nfIndia = NumberFormat.getNumberInstance(Locale.ENGLISH);
+        nfIndia.setMaximumFractionDigits(2);
+        NumberFormat nfChina = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat nfFrance = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        if (payment >= 0 && payment <= Math.pow(10, 9)) {
+            System.out.println("US: " + nfUS.format(payment));
+            System.out.println("India: Rs." + nfIndia.format(payment));
+            System.out.println("China: " + nfChina.format(payment));
+            System.out.println("France: " + nfFrance.format(payment));
         }
     }
 }
