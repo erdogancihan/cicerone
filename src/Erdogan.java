@@ -6,9 +6,10 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.Scanner;
 import java.text.NumberFormat;
+import java.math.BigInteger;
 
 public class Erdogan {
-    public Erdogan() throws IOException {
+    public Erdogan() {
         // helloWorld();
         // sayialRun();
         // learnIO();
@@ -20,8 +21,14 @@ public class Erdogan {
         // intToString();
         // getWeekDay(8, 5, 2015);
         formatCurrency();
-
     }
+
+    public Erdogan(String str) {
+        System.out.println(str);
+    }
+
+
+    public static String str1 = "statik string";
 
     private void helloWorld() {
         System.out.println("Hello World Erdogan");
@@ -220,5 +227,22 @@ public class Erdogan {
             System.out.println("France: " + nfFrance.format(payment));
         }
     }
+
+    private void BigintPrime() throws Exception {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String n = bufferedReader.readLine();
+
+        bufferedReader.close();
+        if (n.length() <= 100) {
+            BigInteger nn = new BigInteger(n);
+            if (BigInteger.valueOf(2).compareTo(nn) > 1) {
+                if (nn.isProbablePrime(1)) {
+                    System.out.println("prime");
+                }
+            }
+        }
+    }
+
 }
 

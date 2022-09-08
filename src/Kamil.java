@@ -5,6 +5,7 @@ public class Kamil {
         //helloWorld();
         //loop2();
        //endoffile();
+
     }
     private void loop2(){
         Scanner in = new Scanner(System.in);
