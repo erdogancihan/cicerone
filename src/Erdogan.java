@@ -24,7 +24,8 @@ public class Erdogan {
         //BigintPrime();
         //subString();
         //subStringComparison();
-        palindrome();
+        // palindrome();
+        isAnagram();
     }
 
 
@@ -273,7 +274,7 @@ public class Erdogan {
         if (s.length() >= 1 && s.length() <= 1000) {
             for (int i = 0; i < s.length() - k + 1; i++) {
                 // System.out.println(s.substring(i,i+k));
-                String sub=s.substring(i, i + k);
+                String sub = s.substring(i, i + k);
                 if (smallest.compareTo(sub) >= 0) {
                     smallest = sub;
                 }
@@ -284,12 +285,13 @@ public class Erdogan {
         }
         System.out.println(smallest + "\n" + largest);
     }
-private void palindrome(){
-    Scanner sc=new Scanner(System.in);
-    String A=sc.next();
-    /* Enter your code here. Print output to STDOUT. */
-    String s="Yes";
-    if(A.length()<=50){
+
+    private void palindrome() {
+        Scanner sc = new Scanner(System.in);
+        String A = sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        String s = "Yes";
+        if (A.length() <= 50) {
         /*
         for(int i=0;i<A.length()/2;i++){
             if(A.charAt(i)!=A.charAt(A.length()-i-1)){
@@ -299,12 +301,36 @@ private void palindrome(){
         }
         System.out.println(s);*/
 
-        StringBuilder sb=new StringBuilder(A);
-        if( sb.reverse().toString().compareTo(A)==0){
-            System.out.println("Yes");
-        }else System.out.println("No");
+            StringBuilder sb = new StringBuilder(A);
+            if (sb.reverse().toString().compareTo(A) == 0) {
+                System.out.println("Yes");
+            } else System.out.println("No");
+        }
     }
-}
+
+    private void isAnagram() {
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = true;
+        a = a.toUpperCase();
+        b = b.toUpperCase();
+        if (a.length() >= 1 && b.length() <= 50) {
+            if (a.length() != b.length()) {
+                ret = false;
+            }
+            while (a.length() > 0) {
+                String rem = a.substring(0, 1);
+                a = a.replaceFirst(rem, "");
+                b = b.replaceFirst(rem, "");
+                if (a.length() != b.length()) {
+                    ret = false;
+                }
+            }
+        }
+        System.out.println((ret) ? "Anagrams" : "Not Anagrams");
+    }
 
 }
 
