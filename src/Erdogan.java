@@ -25,7 +25,8 @@ public class Erdogan {
         //subString();
         //subStringComparison();
         // palindrome();
-        isAnagram();
+        //isAnagram();
+        stringTokens();
     }
 
 
@@ -330,6 +331,27 @@ public class Erdogan {
             }
         }
         System.out.println((ret) ? "Anagrams" : "Not Anagrams");
+    }
+
+    private void stringTokens() {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        scan.close();
+        int length = 0;
+        if (s.length() >= 1 && s.length() <= 4 * Math.pow(10, 5)) {
+            String[] sArray = s.split("[ !,?._'@]");
+            for (int i = 0; i < sArray.length; i++) {
+                if (sArray[i].matches("[A-Za-z]+")) {
+                    length++;
+                }
+            }
+            System.out.println(length);
+            for (int i = 0; i < sArray.length; i++) {
+                if (sArray[i].matches("[A-Za-z]+")) {
+                    System.out.println(sArray[i]);
+                }
+            }
+        }
     }
 
 }
