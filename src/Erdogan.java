@@ -23,7 +23,8 @@ public class Erdogan {
         // formatCurrency();
         //BigintPrime();
         //subString();
-        subStringComparison();
+        //subStringComparison();
+        palindrome();
     }
 
 
@@ -283,6 +284,27 @@ public class Erdogan {
         }
         System.out.println(smallest + "\n" + largest);
     }
+private void palindrome(){
+    Scanner sc=new Scanner(System.in);
+    String A=sc.next();
+    /* Enter your code here. Print output to STDOUT. */
+    String s="Yes";
+    if(A.length()<=50){
+        /*
+        for(int i=0;i<A.length()/2;i++){
+            if(A.charAt(i)!=A.charAt(A.length()-i-1)){
+                s="No";
+                i=A.length();
+            }
+        }
+        System.out.println(s);*/
+
+        StringBuilder sb=new StringBuilder(A);
+        if( sb.reverse().toString().compareTo(A)==0){
+            System.out.println("Yes");
+        }else System.out.println("No");
+    }
+}
 
 }
 
