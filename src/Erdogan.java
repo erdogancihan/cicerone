@@ -9,7 +9,7 @@ import java.text.NumberFormat;
 import java.math.BigInteger;
 
 public class Erdogan {
-    public Erdogan()  {
+    public Erdogan() {
         // helloWorld();
         // sayialRun();
         // learnIO();
@@ -22,13 +22,15 @@ public class Erdogan {
         // getWeekDay(8, 5, 2015);
         // formatCurrency();
         //BigintPrime();
-        subString();
+        //subString();
+        subStringComparison();
     }
 
 
-
     private void helloWorld() {
-        System.out.println("Hello World Erdogan");
+        String s = "0123456";
+
+        System.out.println(s.substring(6, 7));
     }
 
     private void sayial() {
@@ -248,9 +250,38 @@ public class Erdogan {
         int end = in.nextInt();
         if (S.length() >= 1 && S.length() <= 100) {
             if (start >= 0 && start < end && end <= S.length()) {
-                System.out.println(S.substring(start,end));
+                System.out.println(S.substring(start, end));
             }
         }
+    }
+
+    private void subStringComparison() {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        int k = scan.nextInt();
+        scan.close();
+
+        String smallest = "";
+        String largest = "";
+        // Complete the function
+        // 'smallest' must be the lexicographically smallest substring of length 'k'
+        // 'largest' must be the lexicographically largest substring of length 'k'
+        smallest = s.substring(0, k);
+        largest = s.substring(0, k);
+
+        if (s.length() >= 1 && s.length() <= 1000) {
+            for (int i = 0; i < s.length() - k + 1; i++) {
+                // System.out.println(s.substring(i,i+k));
+                String sub=s.substring(i, i + k);
+                if (smallest.compareTo(sub) >= 0) {
+                    smallest = sub;
+                }
+                if (largest.compareTo(sub) <= 0) {
+                    largest = sub;
+                }
+            }
+        }
+        System.out.println(smallest + "\n" + largest);
     }
 
 }
