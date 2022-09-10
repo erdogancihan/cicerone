@@ -9,7 +9,7 @@ import java.text.NumberFormat;
 import java.math.BigInteger;
 
 public class Erdogan {
-    public Erdogan() {
+    public Erdogan()  {
         // helloWorld();
         // sayialRun();
         // learnIO();
@@ -20,15 +20,12 @@ public class Erdogan {
         // eof();
         // intToString();
         // getWeekDay(8, 5, 2015);
-        formatCurrency();
+        // formatCurrency();
+        //BigintPrime();
+        subString();
     }
 
-    public Erdogan(String str) {
-        System.out.println(str);
-    }
 
-
-    public static String str1 = "statik string";
 
     private void helloWorld() {
         System.out.println("Hello World Erdogan");
@@ -240,6 +237,18 @@ public class Erdogan {
                 if (nn.isProbablePrime(1)) {
                     System.out.println("prime");
                 }
+            }
+        }
+    }
+
+    private void subString() {
+        Scanner in = new Scanner(System.in);
+        String S = in.nextLine();
+        int start = in.nextInt();
+        int end = in.nextInt();
+        if (S.length() >= 1 && S.length() <= 100) {
+            if (start >= 0 && start < end && end <= S.length()) {
+                System.out.println(S.substring(start,end));
             }
         }
     }

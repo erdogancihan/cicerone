@@ -10,6 +10,6 @@ public class Main {
         Kamil kamil = new Kamil();
         Zeynel zeynel = new Zeynel();
         Erdogan erdogan = new Erdogan ();
-        erdogan.
+
     }
 }
