@@ -23,6 +23,7 @@ public class Erdogan {
         // getWeekDay(8, 5, 2015);
         // formatCurrency();
         //BigintPrime();
+        stringsIntro();
         //subString();
         //subStringComparison();
         // palindrome();
@@ -355,8 +356,7 @@ public class Erdogan {
             }
         }
     }
-    private void patternSyntaxChecker()
-    {
+    private void patternSyntaxChecker() {
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
         while(testCases>0){
@@ -374,6 +374,19 @@ public class Erdogan {
 
 
         }
+    }
+
+    private void stringsIntro(){
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+
+        System.out.println(A.length()+B.length());
+        if(A.compareTo(B)>0)System.out.println("Yes");else System.out.println("No");
+        A=A.substring(0,1).toUpperCase()+A.substring(1);
+        B=B.substring(0,1).toUpperCase()+B.substring(1);
+
+        System.out.println(A + " " + B);
     }
 
 }
