@@ -7,6 +7,7 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.text.NumberFormat;
 import java.math.BigInteger;
+import java.util.regex.*;
 
 public class Erdogan {
     public Erdogan() {
@@ -26,7 +27,8 @@ public class Erdogan {
         //subStringComparison();
         // palindrome();
         //isAnagram();
-        stringTokens();
+        //stringTokens();
+        //patternSyntaxChecker();
     }
 
 
@@ -351,6 +353,26 @@ public class Erdogan {
                     System.out.println(sArray[i]);
                 }
             }
+        }
+    }
+    private void patternSyntaxChecker()
+    {
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        while(testCases>0){
+            String pattern = in.nextLine();
+            //Write your code
+            testCases--;
+
+            try{
+                Pattern.compile(pattern);
+                System.out.println("Valid");
+            }
+            catch (PatternSyntaxException e){
+                System.out.println("Invalid");
+            }
+
+
         }
     }
 
