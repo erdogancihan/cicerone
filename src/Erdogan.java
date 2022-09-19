@@ -8,6 +8,8 @@ import java.util.Scanner;
 import java.text.NumberFormat;
 import java.math.BigInteger;
 import java.util.regex.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Erdogan {
     public Erdogan() {
@@ -30,7 +32,8 @@ public class Erdogan {
         //isAnagram();
         //stringTokens();
         //patternSyntaxChecker();
-        duplicateWords();
+        //duplicateWords();
+        tagContentExtractor();
     }
 
 
@@ -415,6 +418,56 @@ public class Erdogan {
         in.close();
     }
 
+    private void tagContentExtractor() {
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        while (testCases > 0) {
+            String line = in.nextLine();
+            String regStr = "<(.+)>([\\w]+[^<]*)</\\1>";
+            Pattern p = Pattern.compile(regStr);
+            Matcher m = p.matcher(line);
+            int counter = 0;
+            while (m.find()) {
+                //System.out.println(m.group(0));
+                //System.out.println(m.group(1));
+                System.out.println(m.group(2));
+                counter++;
+            }
+            if (counter == 0) {
+                System.out.println("None");
+            }
+            testCases--;
+        }
+    }
 
+    private void arraylist2D() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        List<ArrayList<Integer>> arr = new ArrayList<>(n);
+
+        if (n >= 1 || n <= 20000) {
+            for (int i = 0; i < n; i++) {
+                arr.add(new ArrayList<>());
+                int d = scanner.nextInt();
+                if (d >= 0 || d <= 50000) {
+                    for (int j = 0; j < d; j++) {
+                        arr.get(i).add(scanner.nextInt());
+                    }
+                }
+            }
+        }
+
+        int q = scanner.nextInt();
+        if (q >= 1 || q <= 1000) {
+            for (int i = 0; i < q; i++) {
+                int x = scanner.nextInt();
+                int y = scanner.nextInt();
+                if (x >= 1 || x <= n) {
+                    if (arr.get(x - 1).size() >= y && arr.get(x - 1).size() > 0) {
+                        System.out.println(arr.get(x - 1).get(y - 1));
+                    } else System.out.println("ERROR!");
+                }
+            }
+        }
+    }
 }
-
