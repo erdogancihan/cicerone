@@ -470,4 +470,36 @@ public class Erdogan {
             }
         }
     }
+
+    private void javaList() {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        List<Integer> L = new ArrayList();
+        if (N >= 1 || N <= 4000) {
+            while (N-- > 0) {
+                L.add(scanner.nextInt());
+            }
+        }
+        int Q = scanner.nextInt();
+        if (Q >= 1 || Q <= 4000) {
+            String query;
+            while (Q-- > 0) {
+                query = scanner.next().toLowerCase();
+                int x = scanner.nextInt();
+                switch (query) {
+                    case "insert":
+                        int y = scanner.nextInt();
+                        L.add(x, y);
+                        break;
+                    case "delete":
+                        L.remove(x);
+                        break;
+                }
+            }
+        }
+        scanner.close();
+        for (int i : L) {
+            System.out.print(i + " ");
+        }
+    }
 }
