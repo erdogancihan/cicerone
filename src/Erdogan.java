@@ -2,14 +2,10 @@ import javax.naming.InterruptedNamingException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Calendar;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 import java.text.NumberFormat;
 import java.math.BigInteger;
 import java.util.regex.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Erdogan {
     public Erdogan() {
@@ -33,7 +29,8 @@ public class Erdogan {
         //stringTokens();
         //patternSyntaxChecker();
         //duplicateWords();
-        tagContentExtractor();
+        //tagContentExtractor();
+        mapLearn();
     }
 
 
@@ -501,5 +498,51 @@ public class Erdogan {
         for (int i : L) {
             System.out.print(i + " ");
         }
+
     }
+
+    private void mapLearn() {
+        Map<Integer, Integer> mapInt = new LinkedHashMap<>();
+        mapInt.put(1, 1);
+        mapInt.put(2, 3);
+        mapInt.put(3, 6);
+        System.out.println(mapInt);
+    }
+
+    private void stackLearn() {
+        Scanner sc = new Scanner(System.in);
+        Map<String, String> reverse = new HashMap<>();
+        reverse.putIfAbsent("{", "}");
+        reverse.putIfAbsent("(", ")");
+        reverse.putIfAbsent("[", "]");
+        Stack<String> stack = new Stack<>();
+
+
+        while (sc.hasNext()) {
+            String input = sc.next();
+            //Complete the code
+            String[] inputArr = input.split("");
+            int maxSize = 0;
+            for (String s : inputArr) {
+                if (reverse.containsKey(s)) {
+                    stack.push(s);
+                    maxSize++;
+                    // System.out.println("stack push" + s  );
+                } else if (!stack.isEmpty()) {
+                    if (reverse.get(stack.peek()).contains(s)) {
+                        // System.out.println("stack pop " + s  );
+                        stack.pop();
+                    }
+                } else {
+                    stack.push(s);
+                    break;
+                }
+            }
+            if (stack.isEmpty() && maxSize > 0) System.out.println("true");
+            else System.out.println("false");
+            stack.removeAllElements();
+            maxSize = 0;
+        }
+    }
+
 }
