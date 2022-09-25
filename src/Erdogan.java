@@ -545,4 +545,27 @@ public class Erdogan {
         }
     }
 
+    private void javaHashSet() {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        String[] pair_left = new String[t];
+        String[] pair_right = new String[t];
+
+        for (int i = 0; i < t; i++) {
+            pair_left[i] = s.next();
+            pair_right[i] = s.next();
+        }
+
+        Set<String> hs = new HashSet<String>();
+        int outPut = 0;
+        if (t >= 0 || t <= 100000) {
+            for (int i = 0; i < t; i++) {
+                if (hs.add(pair_left[i] + " " + pair_right[i])) {
+                    outPut++;
+                    System.out.println(outPut);
+                } else System.out.println(outPut);
+            }
+
+        }
+    }
 }
