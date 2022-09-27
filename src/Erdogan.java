@@ -567,5 +567,28 @@ public class Erdogan {
             }
 
         }
+        Deque
+    }
+
+    private void dequeJava() {
+        Scanner in = new Scanner(System.in);
+        Deque<Integer> deque = new ArrayDeque<>();
+
+        int n = in.nextInt();
+        int m = in.nextInt();
+        int max = 0;
+        Set<Integer> set = new HashSet<>();
+
+        for (int i = 0; i < n; i++) {
+            int num = in.nextInt();
+            deque.addLast(num);
+            set.add(num);
+            if (deque.size() == m) {
+                if (max < set.size()) max = set.size();
+                int removedInt = deque.pollFirst();
+                if (!deque.contains(removedInt)) set.remove(removedInt);
+            }
+        }
+        System.out.println(max);
     }
 }
