@@ -6,9 +6,11 @@ import java.util.*;
 import java.text.NumberFormat;
 import java.math.BigInteger;
 import java.util.regex.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class Erdogan {
-    public Erdogan() {
+    public Erdogan() throws NoSuchAlgorithmException {
         // helloWorld();
         // sayialRun();
         // learnIO();
@@ -30,7 +32,8 @@ public class Erdogan {
         //patternSyntaxChecker();
         //duplicateWords();
         //tagContentExtractor();
-        mapLearn();
+        //mapLearn();
+        //sha256();
     }
 
 
@@ -627,6 +630,19 @@ public class Erdogan {
                 }
                 System.out.println(B1.cardinality() + " " + B2.cardinality());
             }
+        }
+    }
+
+    private void sha256() throws NoSuchAlgorithmException {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        scan.close();
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        digest.update(s.getBytes());
+        byte[] digested = digest.digest();
+        for (byte b : digested) {
+            System.out.format("%02x", b);
         }
     }
 }
