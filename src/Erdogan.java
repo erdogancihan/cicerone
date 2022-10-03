@@ -567,7 +567,6 @@ public class Erdogan {
             }
 
         }
-        Deque
     }
 
     private void dequeJava() {
@@ -590,5 +589,44 @@ public class Erdogan {
             }
         }
         System.out.println(max);
+    }
+
+    private void bitSets() {
+        final Scanner scan = new Scanner(System.in);
+        int N = scan.nextInt();
+        int M = scan.nextInt();
+        if (N >= 1 & N <= 1000 & M >= 1 & M <= 10000) {
+            BitSet B1 = new BitSet(N);
+            BitSet B2 = new BitSet(N);
+            BitSet[] bitSets = {B1, B2};
+            //Operational variabales
+            String operation = "";
+            int firstArg = 0;
+            int secondArg = 0;
+
+            for (int i = 0; i < M; i++) {
+                operation = scan.next();
+                firstArg = scan.nextInt();
+                secondArg = scan.nextInt();
+                switch (operation) {
+                    case "AND":
+                        bitSets[firstArg - 1].and(bitSets[secondArg - 1]);
+                        break;
+                    case "OR":
+                        bitSets[firstArg - 1].or(bitSets[secondArg - 1]);
+                        break;
+                    case "XOR":
+                        bitSets[firstArg - 1].xor(bitSets[secondArg - 1]);
+                        break;
+                    case "FLIP":
+                        bitSets[firstArg - 1].flip(secondArg);
+                        break;
+                    case "SET":
+                        bitSets[firstArg - 1].set(secondArg);
+                        break;
+                }
+                System.out.println(B1.cardinality() + " " + B2.cardinality());
+            }
+        }
     }
 }
