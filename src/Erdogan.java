@@ -34,6 +34,7 @@ public class Erdogan {
         //tagContentExtractor();
         //mapLearn();
         //sha256();
+        stringBuilderTest();
     }
 
 
@@ -152,6 +153,8 @@ public class Erdogan {
             }
         }
     }
+
+
 
     private void dataTypes() {
         Scanner sc = new Scanner(System.in);
@@ -644,5 +647,11 @@ public class Erdogan {
         for (byte b : digested) {
             System.out.format("%02x", b);
         }
+    }
+    private void stringBuilderTest(){
+        String s="AaaabbbCCCC";
+        StringBuilder ss=new StringBuilder(s);
+        System.out.println(s);
+        System.out.println(ss.reverse());
     }
 }
