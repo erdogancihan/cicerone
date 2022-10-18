@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-18T11:56:06.261Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42" etag="D2qY-oAzGdqZSm3v0puR" version="20.4.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-18T11:57:27.619Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.42" etag="wrc3LYLwp-0RjQ0Z1XLv" version="20.4.1" type="github" pages="2">
   <diagram id="l7WTLxCY0BGAzXwI7EDH" name="Upload">
     <mxGraphModel dx="1037" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -60,6 +60,51 @@
         </mxCell>
         <mxCell id="SdpZGz_ZicUBBqNNzTNo-17" value="check Document Type and Size" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="490" y="290" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="L6SPGZEKuGvdmys7FuJ-" name="SearchforTranslator">
+    <mxGraphModel dx="1037" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="446BZFQNkHm3-VemK5ir-1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;ciceron&lt;br&gt;Search Translator&lt;br&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="80" width="560" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-2" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;fontSize=12;" edge="1" parent="1" source="446BZFQNkHm3-VemK5ir-3" target="446BZFQNkHm3-VemK5ir-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-3" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-4" value="extends" style="sketch=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;dashed=1;fontSize=12;" edge="1" parent="1" source="446BZFQNkHm3-VemK5ir-10" target="446BZFQNkHm3-VemK5ir-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="379" y="180" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-5" value="implements" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;fontSize=12;dashed=1;" edge="1" parent="1" source="446BZFQNkHm3-VemK5ir-6" target="446BZFQNkHm3-VemK5ir-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-6" value="get Translators From DB" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="270" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-7" value="implements" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;dashed=1;fontSize=12;" edge="1" parent="1" source="446BZFQNkHm3-VemK5ir-8" target="446BZFQNkHm3-VemK5ir-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="516.4285714285713" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-8" value="check Country and Place" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-9" value="implements" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;dashed=1;fontSize=12;" edge="1" parent="1" source="446BZFQNkHm3-VemK5ir-10" target="446BZFQNkHm3-VemK5ir-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-10" value="search Translator" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="270" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="446BZFQNkHm3-VemK5ir-11" value="Connect to DB" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="395" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
