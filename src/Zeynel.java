@@ -1,10 +1,15 @@
 public class Zeynel {
     //constructer
     public Zeynel() {
-        helloWorld();
+       // helloWorld();
     }
 
     private void helloWorld() {
+        System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
+        System.out.println("Hello World Zeynel");
         System.out.println("Hello World Zeynel");
     }
 }
