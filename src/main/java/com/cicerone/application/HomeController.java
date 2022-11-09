@@ -21,6 +21,6 @@ public class HomeController {
         mv.addObject("name", myName);
         mv.setViewName("home");
         return mv;
-        //dd
+        //
     }
 }
